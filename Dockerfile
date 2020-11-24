@@ -10,4 +10,4 @@ WORKDIR /app
 
 RUN pipenv sync
 
-ENTRYPOINT [ "pipenv", "run", "gunicorn", "app.wsgi" ]
+ENTRYPOINT [ "pipenv", "run", "gunicorn", "-b", ":8000", "app.wsgi" ]
